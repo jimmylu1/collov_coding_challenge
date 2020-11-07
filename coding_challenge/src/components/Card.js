@@ -5,7 +5,7 @@ import CardContent from "@material-ui/core/CardContent";
 
 const TrackingCard = ({ text }) => {
   return (
-    <Card>
+    <Card style={styles.cardContainer}>
       <CardContent>
         <Typography gutterBottom>{text}</Typography>
       </CardContent>
@@ -15,7 +15,9 @@ const TrackingCard = ({ text }) => {
 
 const styles = {
   cardContainer: {
-    marginBotttom: 0,
+    marginBotttom: 8,
+    padding: 8,
+    marginTop: 8,
   },
 };
 

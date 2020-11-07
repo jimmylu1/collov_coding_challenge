@@ -1,13 +1,15 @@
 import React from "react";
 import TrackingCard from "./Card";
+import AddCardButton from "./AddCardButton";
 
 const List = ({ title, cards }) => {
   return (
     <div style={styles.container}>
       <h3>{title}</h3>
       {cards.map((card) => (
-        <TrackingCard text={card.name} />
+        <TrackingCard key={card.id} text={card.name} />
       ))}
+      {title === "Applied" ? <AddCardButton /> : null}
     </div>
   );
 };
