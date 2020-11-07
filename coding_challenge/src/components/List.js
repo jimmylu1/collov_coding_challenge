@@ -1,21 +1,24 @@
 import React from "react";
 import TrackingCard from "./Card";
 
-const List = ({ title }) => {
+const List = ({ title, cards }) => {
   return (
     <div style={styles.container}>
       <h3>{title}</h3>
-      <TrackingCard />
+      {cards.map((card) => (
+        <TrackingCard text={card.name} />
+      ))}
     </div>
   );
 };
 
 const styles = {
   container: {
-    backgroundColor: "grey",
+    backgroundColor: "#dfe3e6",
     borderRadius: 3,
     width: 300,
     padding: 8,
+    marginRight: 8,
   },
 };
 
